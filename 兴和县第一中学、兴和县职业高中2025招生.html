@@ -1,0 +1,189 @@
+<!DOCTYPE html>  
+<html lang="zh">  
+<head>  
+  <meta charset="UTF-8" />  
+  <title>2025兴和县中/职高招生H5升级版</title>  
+  <meta name="viewport" content="width=device-width,initial-scale=1">  
+  <script src="https://cdn.tailwindcss.com"></script>  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
+  <style>  
+    .modal-bg { display:none; position:fixed;z-index:60;inset:0;background:rgba(0,0,0,.5);}  
+    .modal { display:none;position:fixed;z-index:70;left:50%;top:50%;transform:translate(-50%,-50%);background:#fff;border-radius:1em;max-width:95vw;max-height:93vh;overflow:auto;}  
+  </style>  
+</head>  
+<body class="bg-white text-gray-900 scroll-smooth">  
+
+<!-- HEADER -->  
+<nav class="fixed top-0 left-0 right-0 bg-blue-800 text-white shadow z-50">  
+  <div class="max-w-6xl mx-auto px-3 flex items-center justify-between h-14">  
+    <div class="flex items-center font-bold text-lg space-x-3">  
+      <!-- [LOGO/校徽] -->  
+      <img src="images/logo.png" class="w-9 h-9 rounded-full" alt="LOGO"/>  
+      <span>兴和县第一中学/职业高中</span>  
+    </div>  
+    <div class="hidden md:flex font-medium space-x-6">  
+      <a href="#highlight" class="hover:text-yellow-200">成绩亮点</a>  
+      <a href="#classes" class="hover:text-yellow-200">多样班型</a>  
+      <a href="#env" class="hover:text-yellow-200">校园生活</a>  
+      <a href="#admission" class="hover:text-yellow-200">报考流程</a>  
+      <a href="#consult" class="hover:text-yellow-200">报名咨询</a>  
+    </div>  
+    <a href="#consult" class="md:hidden block"><svg width="26" height="26" viewBox="0 0 24 24"><path fill="#fff" d="M3 7h18v2H3V7zm0 4h18v2H3v-2zm0 4h12v2H3v-2z"/></svg></a>  
+  </div>  
+</nav>  
+
+<!-- HERO -->  
+<section class="pt-14 bg-gradient-to-br from-blue-900 to-blue-700 text-white pb-2">  
+  <div class="max-w-6xl mx-auto px-3 flex flex-col md:flex-row items-center py-10">  
+    <div class="flex-1 space-y-5">  
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-2">  
+        兴和县一中&职业高中2025招生<span class="text-yellow-200">火热进行中</span>  
+      </h1>  
+      <p class="text-lg">70年本地品牌、低进高出、本科率再创新高</p>  
+      <div class="flex gap-6 pt-5">  
+        <div class="bg-blue-600 p-4 rounded-xl min-w-[92px] text-center shadow-md">  
+          <span class="text-3xl font-extrabold text-yellow-300">47.41%</span>  
+          <div class="text-xs">本科上线率</div>  
+        </div>  
+        <div class="bg-blue-600 p-4 rounded-xl min-w-[92px] text-center shadow-md">  
+          <span class="text-3xl font-bold text-yellow-300">11人</span>  
+          <div class="text-xs">超500分高分</div>  
+        </div>  
+        <div class="bg-blue-600 p-4 rounded-xl min-w-[92px] text-center shadow-md">  
+          <span class="text-3xl font-bold text-yellow-300">209分</span>  
+          <div class="text-xs">最大单人进步</div>  
+        </div>  
+      </div>  
+      <a href="#consult" class="inline-block mt-7 font-semibold bg-yellow-300 px-8 py-2 text-blue-900 rounded transition hover:bg-yellow-200">预约参观/快速报名</a>  
+    </div>  
+    <!-- [首页实拍主图/校门/航拍, src自换] -->  
+    <div class="flex-1 flex justify-center">  
+      <img src="images/hero-campus.jpg" alt="校园大图" class="rounded-2xl shadow-2xl border-4 border-blue-700 mt-5 md:mt-0 w-full max-w-md"/>  
+    </div>  
+  </div>  
+</section>  
+
+<!-- ACHIEVEMENT/成绩亮点+成长故事 -->  
+<section id="highlight" class="py-14 bg-white">  
+  <div class="max-w-6xl mx-auto px-3">  
+    <div class="grid md:grid-cols-2 gap-8 items-center">  
+      <!-- 左侧：核心数据亮点 -->  
+      <div>  
+        <h2 class="text-2xl font-bold text-blue-800 mb-5">我们用实力说话</h2>  
+        <ul class="list-disc list-inside text-blue-900 text-xl font-medium space-y-2">  
+          <li>2025年高考本科上线率 <span class="text-blue-700 font-bold">47.41%</span>，再创新高</li>  
+          <li><span class="text-blue-700 font-bold">11人</span>成绩超500分，<span class="text-blue-700 font-bold">65人</span>超445分</li>  
+          <li>“低进高出”典型：普通生逆袭、每年都有明显进步</li>  
+        </ul>  
+        <div class="mt-4 text-gray-700 text-lg">  
+          <span class="font-bold">快速咨询电话：</span>0474-7218605  
+        </div>  
+      </div>  
+      <!-- 右侧：真实学子榜单（原先位置） -->  
+      <div class="bg-blue-50 rounded-xl p-6 shadow flex flex-col justify-center">  
+        <div class="font-bold mb-2 text-blue-700 text-center text-lg">真实学子成长故事</div>  
+        <table class="w-full text-sm mb-3">  
+          <thead>  
+            <tr class="text-blue-900 text-left">  
+              <th>姓名</th><th>中考</th><th>高考</th><th>进步</th><th>故事详情</th>  
+            </tr>  
+          </thead>  
+          <tbody>  
+            <tr>  
+              <td>刘晓云</td><td>285</td><td>494</td><td class="font-bold text-yellow-500">209</td>  
+              <td><button class="text-blue-800 underline open-modal" data-modal="#modal-liu">点击查看</button></td>  
+            </tr>  
+            <tr>  
+              <td>张佳茜</td><td>340.5</td><td>506</td><td class="font-bold text-yellow-500">165.5</td>  
+              <td><button class="text-blue-800 underline open-modal" data-modal="#modal-zhang">点击查看</button></td>  
+            </tr>  
+            <tr>  
+              <td>范鹏举</td><td>374</td><td>532</td><td class="font-bold text-yellow-500">158</td>  
+              <td><button class="text-blue-800 underline open-modal" data-modal="#modal-fan">点击查看</button></td>  
+            </tr>  
+          </tbody>  
+        </table>  
+      </div>  
+    </div>  
+    <!-- 学生故事弹窗 -->  
+    <div class="modal-bg" id="modal-bg"></div>  
+    <div class="modal w-full max-w-lg p-7" id="modal-liu">  
+      <h2 class="text-xl font-bold mb-2 text-blue-700">刘晓云：三年逆袭之路</h2>  
+      <p>中考285分，在兴和一中努力三年高考逆袭494分，提升209分。家中普通，性格内向但勤奋，班主任耐心辅导，最终实现了梦想的突破。</p>  
+      <button class="mt-7 bg-blue-700 text-white rounded px-5 py-1 close-modal">关闭</button>  
+    </div>  
+    <div class="modal w-full max-w-lg p-7" id="modal-zhang">  
+      <h2 class="text-xl font-bold mb-2 text-blue-700">张佳茜：稳步向上的自信之星</h2>  
+      <p>中考340.5分入学，三年进步至高考506分，提升165分。感谢老师悉心指导，感谢学校多元培养，现已被一本高校录取。</p>  
+      <button class="mt-7 bg-blue-700 text-white rounded px-5 py-1 close-modal">关闭</button>  
+    </div>  
+    <div class="modal w-full max-w-lg p-7" id="modal-fan">  
+      <h2 class="text-xl font-bold mb-2 text-blue-700">范鹏举：挑战自我，成功逆袭</h2>  
+      <p>中考374分，高考532分，提升158分。家校共育、老师带领、刻苦努力成就飞跃。</p>  
+      <button class="mt-7 bg-blue-700 text-white rounded px-5 py-1 close-modal">关闭</button>  
+    </div>  
+  </div>  
+</section>  
+
+<!-- 多样班型，关键诉求分点，弱化照片，突出咨询引导 -->  
+<section id="classes" class="py-14 bg-blue-50">  
+  <div class="max-w-6xl mx-auto px-3">  
+    <h2 class="text-2xl font-bold text-blue-800 mb-10">多元班型，针对性培养</h2>  
+    <div class="grid md:grid-cols-3 gap-8">  
+
+      <!-- 实验班 -->  
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col h-full cursor-pointer class-card" data-modal="#modal-class1">  
+        <h3 class="font-bold mb-2 text-blue-700 text-lg">实验班</h3>  
+        <ul class="list-disc ml-5 text-base text-gray-800 space-y-2">  
+          <li>适合成绩较优、爱学的孩子</li>  
+          <li>骨干教师小班授课，2人间宿舍</li>  
+          <li>重奖助政策支持，助力冲刺一本</li>  
+          <li>高考录取率远高于全校平均</li>  
+        </ul>  
+        <div class="mt-auto pt-2 text-green-700 font-semibold text-sm">「给冲劲孩子加一把力，欢迎家长现场咨询！」</div>  
+      </div>  
+
+      <!-- 艺体特色班 -->  
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col h-full cursor-pointer class-card" data-modal="#modal-class2">  
+        <h3 class="font-bold mb-2 text-blue-700 text-lg">艺体特色班</h3>  
+        <ul class="list-disc ml-5 text-base text-gray-800 space-y-2">  
+          <li>适合有音乐/美术/体育特长孩子</li>  
+          <li>专业老师小班培养，历年升学率高</li>  
+          <li>可走高考/特长升学两条路</li>  
+        </ul>  
+        <div class="mt-auto pt-2 text-green-700 font-semibold text-sm">「特长不丢，升学有路，欢迎实地参观！」</div>  
+      </div>  
+
+      <!-- 职普融通班 -->  
+      <div class="bg-white rounded-xl shadow p-6 flex flex-col h-full cursor-pointer class-card" data-modal="#modal-class3">  
+        <h3 class="font-bold mb-2 text-blue-700 text-lg">职普融通&特色班</h3>  
+        <ul class="list-disc ml-5 text-base text-gray-800 space-y-2">  
+          <li>成绩一般也能逆袭成才</li>  
+          <li>热门专业可选：铁路、护理、计算机等</li>  
+          <li>毕业可升学也可直接就业</li>  
+          <li>多项奖助金，减轻家庭压力</li>  
+        </ul>  
+        <div class="mt-auto pt-2 text-green-700 font-semibold text-sm">「分数不高一样有好出路，现场报名更便捷！」</div>  
+      </div>  
+    </div>  
+
+    <!-- 班型详情弹窗 -->  
+    <div class="modal p-6 max-w-lg" id="modal-class1">  
+      <h2 class="text-blue-800 font-bold text-xl mb-2">实验班详细介绍</h2>  
+      <ul class="list-disc pl-5 text-gray-900 mb-3">  
+        <li>招收中考分数前30名优秀学生，小班制教学</li>  
+        <li>全科骨干教师团队，重奖助</li>  
+        <li>2人间独卫宿舍，管理严格</li>  
+        <li>三年高考一本率全校第一</li>  
+      </ul>  
+      <div class="mt-2 text-blue-600">欢迎家长到校实地交流，体验真实课堂氛围！</div>  
+      <button class="mt-7 bg-blue-700 text-white rounded px-5 py-1 close-modal">关闭</button>  
+    </div>  
+    <div class="modal p-6 max-w-lg" id="modal-class2">  
+      <h2 class="text-blue-800 font-bold text-xl mb-2">艺体特色班详细介绍</h2>  
+      <ul class="list-disc pl-5 text-gray-900 mb-3">  
+        <li>音乐、美术、体育三方向，专业师资对接高校</li>  
+        <li>每年高考、艺考上线率居全县头部</li>  
+        <li>支持普通升学和特长升学双升</li>  
+      </ul>  
+      <div class="mt-2 text-blue-600">欢迎孩子和家长来校参
